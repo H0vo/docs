@@ -1,0 +1,45 @@
+---
+title: "Changelog"
+description: "Product updates and announcements"
+---
+
+<Update label="June 11th, 2025" description="Improved">
+  **GET /coins**  
+  - Added a new `contractAddresses` field in coin data.  
+  - Lists smart contract addresses for tokens (e.g., ERC-20).  
+  - Empty for native coins like Bitcoin.
+
+  **GET /coins/{coinId}**  
+  - Added a new `contractAddresses` field in coin data.  
+  - Lists smart contract addresses for tokens (e.g., ERC-20).  
+  - Empty for native coins like Bitcoin.
+</Update>
+
+<Update label="June 6th, 2025" description="Added">
+  **GET /portfolio/value** — 10 credits
+</Update>
+
+<Update label="June 4th, 2025" description="Added">
+  **GET /portfolio/defi** — 200 credits
+</Update>
+
+<Update label="May 20th, 2025" description="Improved">
+  **GET /wallet/transactions**  
+  - Added a new `wallets` query parameter.  
+  - This update allows users to retrieve transaction history for multiple wallets in a single API call.
+</Update>
+
+<Update label="May 19th, 2025" description="Added">
+  **GET /insights/btc-dominance** — 50 credits  
+  **GET /insights/fear-and-greed** — 50 credits  
+  **GET /insights/fear-and-greed/chart** — 50 credits  
+  **GET /insights/rainbow-chart/{coinId}** — 50 credits
+</Update>
+
+<Update label="May 8th, 2025" description="Added & Changed">
+  **GET /wallet/charts**  
+  - Allows users to retrieve chart data for multiple chains and wallets in a single request.
+
+  **PATCH /wallet/transactions**  
+  - Now supports syncing multiple chains and wallets with a single API call.
+</Update>

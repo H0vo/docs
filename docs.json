@@ -8,27 +8,11 @@
     "dark": "#EA5237"
   },
   "favicon": "/favicon.svg",
-  "anchors": [
-    {
-      "name": "Discord",
-      "icon": "discord",
-      "url": "https://discord.gg/coinstats"
-    },
-    {
-      "name": "GitHub",
-      "icon": "github",
-      "url": "https://github.com/coinstatsHQ"
-    },
-    {
-      "name": "CoinStats",
-      "icon": "globe",
-      "url": "https://coinstats.app"
-    }
-  ],
   "navigation": {
     "tabs": [
       {
         "tab": "Home",
+        "icon": "house",
         "groups": [
           {
             "group": "Getting started",
@@ -43,7 +27,15 @@
       },
       {
         "tab": "API reference",
+        "icon": "code",
         "openapi": "api-reference/openapi.json"
+      },
+      {
+        "tab": "Changelog",
+        "icon": "code-branch",
+        "pages": [
+          "changelog/index"
+        ]
       }
     ],
     "global": {
