@@ -1,0 +1,57 @@
+---
+title: 'Rate Limits'
+description: 'Understanding the credit-based rate limiting system'
+---
+
+The CoinStats API uses a credit-based system for rate limiting. Different endpoints consume different amounts of credits based on the complexity and data requirements of the request.
+
+## Credit System
+
+Each API request consumes a specific number of credits:
+
+| Endpoint Category | Credit Cost | Description |
+|------------------|-------------|-------------|
+| Basic Market Data | 1-2 credits | Simple data like coin lists, basic info |
+| Detailed Data | 3-5 credits | Historical charts, detailed analytics |
+| Wallet Operations | 40-50 credits | Wallet balance, transaction sync |
+| Portfolio Data | 8-10 credits | Portfolio management features |
+| DeFi Data | 400 credits | Comprehensive DeFi portfolio data |
+
+## Managing Your Credits
+
+### Check Your Usage
+Monitor your credit usage through the CoinStats dashboard to ensure you don't exceed your plan limits.
+
+### Plan Limits
+Different subscription plans have different credit limits:
+| Plan | Credits/Month | Rate Limit | Price |
+|------|---------------|------------|-------|
+| **Free** | 1,000,000 | 5 req/sec | Free |
+| **Individual** | 5,000,000 | 30 req/sec | $199/month |
+| **Business** | 80,000,000 | 100 req/sec | $999/month |
+| **Custom** | Custom | Custom | Contact sales |
+
+<Card title="Plans & Pricing" icon="gem" href="https://openapi.coinstats.app/pricing">
+  View full pricing details and features
+</Card>
+
+### Best Practices
+- **Cache responses**: Store frequently requested data locally
+- **Batch requests**: Combine multiple requests when possible
+- **Monitor usage**: Track your credit consumption
+- **Optimize queries**: Use filters to reduce data transfer
+
+## Error Responses
+
+When you exceed your credit limit, you'll receive a `429 Too Many Requests` response:
+
+```json
+{
+  "error": "Rate limit exceeded",
+  "message": "Insufficient credits for this request"
+}
+```
+
+## Credit Reset
+
+Credits are typically reset monthly based on your subscription plan. 

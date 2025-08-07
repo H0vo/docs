@@ -1,111 +1,144 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "CoinStats PublicAPI",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#FF9332",
+    "light": "#FFB347",
+    "dark": "#EA5237"
   },
   "favicon": "/favicon.svg",
+  "anchors": [
+    {
+      "name": "Discord",
+      "icon": "discord",
+      "url": "https://discord.gg/coinstats"
+    },
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/coinstatsHQ"
+    },
+    {
+      "name": "CoinStats",
+      "icon": "globe",
+      "url": "https://coinstats.app"
+    }
+  ],
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Home",
         "groups": [
           {
             "group": "Getting started",
             "pages": [
               "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "authentication",
+              "rate-limits",
+              "errors"
             ]
           }
         ]
       },
       {
         "tab": "API reference",
-        "openapi": "openapi.json"
+        "openapi": "api-reference/openapi.json"
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Api Keys",
+          "href": "https://openapi.coinstats.app",
+          "icon": "key"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "anchor": "CoinStats",
+          "href": "https://coinstats.app",
+          "icon": "globe"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Discord",
+          "href": "https://discord.gg/coinstats",
+          "icon": "discord"
+        },
+        {
+          "anchor": "GitHub",
+          "href": "https://github.com/coinstatsHQ",
+          "icon": "github"
+        },
+        {
+          "anchor": "X",
+          "href": "https://x.com/coinstats",
+          "icon": "x-twitter"
         }
       ]
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/assets/light.svg",
+    "dark": "/assets/dark.svg"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "https://help.coinstats.app/en/"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://openapi.coinstats.app"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
+    "links": [
+      {
+        "header": "Support & Help",
+        "items": [
+          {
+            "label": "Help Center",
+            "href": "https://help.coinstats.app"
+          }
+        ]
+      },
+      {
+        "header": "Features & Insights",
+        "items": [
+          {
+            "label": "Help Center",
+            "href": "https://help.coinstats.app"
+          }
+        ]
+      },
+      {
+        "header": "Contact",
+        "items": [
+          {
+            "label": "Help Center",
+            "href": "https://help.coinstats.app"
+          }
+        ]
+      }
+    ],
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "website": "https://coinstats.app",
+      "github": "https://github.com/CoinStatsHQ",
+      "x": "https://x.com/coinstats"
     }
   }
 }

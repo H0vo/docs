@@ -1,0 +1,106 @@
+---
+title: 'Errors'
+description: 'Common error responses and troubleshooting'
+---
+
+# Error Responses
+
+The CoinStats API uses standard HTTP status codes to indicate the success or failure of requests.
+
+## HTTP Status Codes
+
+| Status Code | Description |
+|-------------|-------------|
+| `200` | Success - Request completed successfully |
+| `400` | Bad Request - Invalid parameters or request format |
+| `401` | Unauthorized - Invalid or missing API key |
+| `404` | Not Found - Resource not found |
+| `409` | Conflict - Resource conflict (e.g., transactions not synced) |
+| `429` | Too Many Requests - Rate limit exceeded |
+| `500` | Internal Server Error - Server error |
+
+## Common Error Responses
+
+### 401 Unauthorized
+
+Invalid or missing API key:
+
+```json
+{
+  "error": "Unauthorized",
+  "message": "Invalid API key"
+}
+```
+
+### 400 Bad Request
+
+Invalid parameters:
+
+```json
+{
+  "error": "Bad Request",
+  "message": "Invalid parameter: coinId",
+}
+```
+
+### 404 Not Found
+
+Resource not found:
+
+```json
+{
+  "error": "Not Found",
+  "message": "Coin with id 'invalid-coin' not found"
+}
+```
+
+### 409 Conflict
+
+Transactions not synced:
+
+```json
+{
+  "message": "Transactions not synced. Please call PATCH /transactions"
+}
+```
+
+### 429 Too Many Requests
+
+Rate limit exceeded:
+
+```json
+{
+  "error": "Rate limit exceeded",
+  "message": "Insufficient credits for this request"
+}
+```
+
+## Troubleshooting
+
+### Authentication Issues
+
+1. **Check your API key**: Ensure you're using the correct API key
+2. **Verify header format**: Make sure the `X-API-KEY` header is properly set
+3. **Check key permissions**: Ensure your API key has the necessary permissions
+
+### Rate Limiting
+
+1. **Monitor credit usage**: Check your credit consumption in the dashboard
+2. **Optimize requests**: Use filters and pagination to reduce data transfer
+3. **Upgrade plan**: Consider upgrading if you consistently hit limits
+
+### Data Not Found
+
+1. **Verify parameters**: Check that all required parameters are provided
+2. **Check data availability**: Some data might not be available for all coins/time periods
+3. **Use correct IDs**: Ensure you're using the correct coin IDs from the API
+
+### Wallet/Transaction Issues
+
+1. **Sync transactions**: Call the sync endpoint before requesting transaction data
+2. **Check wallet address**: Ensure the wallet address is valid and supported
+3. **Verify blockchain**: Make sure the blockchain is supported by CoinStats
+
+import Support from "/snippets/support.mdx"
+
+<Support title={"Getting Help"} />
